@@ -1,0 +1,16 @@
+services:
+  isawyoucalled:
+    image: isawyoucalled
+    ports:
+      - '8000:8000'
+    volumes:
+      - kv-data:/etc/data
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DENO_KV_PATH=${DENO_KV_PATH}
+      - TELEGRAM_BOT_API_SECRET=${TELEGRAM_BOT_API_SECRET}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - DENO_ENV=prod
+
+volumes:
+  kv-data:

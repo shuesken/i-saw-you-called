@@ -1,0 +1,27 @@
+services:
+  isawyoucalled:
+    image: ...
+    ports:
+      - '8000:8000'
+    volumes:
+      - kv-data:${DENO_KV_PATH}
+    networks:
+      - nginx-proxy
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN}
+      ONBOARDING_BOT_TOKEN: ${ONBOARDING_BOT_TOKEN}
+      DENO_KV_PATH: ${DENO_KV_PATH}
+      TELEGRAM_BOT_API_SECRET: ${TELEGRAM_BOT_API_SECRET}
+      DENO_ENV: prod
+      VIRTUAL_HOST: ...
+      LETSENCRYPT_HOST: ...
+      VIRTUAL_PORT: 8000
+    restart: always
+
+volumes:
+  kv-data:
+
+networks:
+  nginx-proxy:
+    external: true
+    name: nginx-proxy

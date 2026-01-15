@@ -1,0 +1,41 @@
+{
+    "Commands": [
+        {
+            "YarnName": "send_game",
+            "DefinitionName": "Sends Game",
+            "Language": "gml",
+            "Parameters": [
+                {
+                    "Name": "game short name",
+                    "Type": "string"
+                }
+            ]
+        },
+        {
+            "YarnName": "pause",
+            "DefinitionName": "Pauses",
+            "Language": "gml",
+            "Parameters": [
+                {
+                    "Name": "amount",
+                    "Type": "number"
+                },
+                {
+                    "Name": "type",
+                    "Type": "string"
+                }
+            ]
+        },
+        {
+            "YarnName": "typing",
+            "DefinitionName": "Sets a typing notification.",
+            "Language": "gml",
+            "Parameters": [
+                {
+                    "Name": "duration",
+                    "Type": "number"
+                },
+            ]
+        }
+    ]
+}
